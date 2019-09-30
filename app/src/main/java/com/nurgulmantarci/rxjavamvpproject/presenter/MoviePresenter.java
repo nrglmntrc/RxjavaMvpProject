@@ -8,7 +8,6 @@ import com.nurgulmantarci.rxjavamvpproject.services.IMovieService;
 import java.util.List;
 
 import io.reactivex.Observer;
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
@@ -17,11 +16,12 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MoviePresenter implements IMovieContract.Presenter {
+
+    IMovieContract.View mView;
+
     public MoviePresenter(IMovieContract.View view){
         mView=view;
     }
-
-    IMovieContract.View mView;
 
 
     @Override
