@@ -9,7 +9,7 @@ public interface IMovieContract {
         void init();
         void showProgress();
         void hideProgress();
-        void showError(String string);
+        void showError(String errorMsj);
         void loadList(List<Movie> movieList);
     }
 
